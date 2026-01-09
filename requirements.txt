@@ -1,0 +1,15 @@
+apache-airflow
+psycopg2-binary
+Spark
+pyspark
+pandas
+numpy
+scikit-learn
+fastparquet
+matplotlib
+seaborn
+pyarrow  
+sqlalchemy 
+psycopg2-binary
+pytest
+fastapi
