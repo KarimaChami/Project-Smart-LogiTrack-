@@ -1,1 +1,19 @@
-.venv
+# Virtual environment
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Airflow
+airflow.db
+airflow.cfg
+
+# OS
+.DS_Store
+Thumbs.db
