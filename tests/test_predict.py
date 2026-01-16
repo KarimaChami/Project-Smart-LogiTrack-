@@ -1,15 +1,22 @@
-from app.main import app
+from api.main import app
 from fastapi.testclient import TestClient
 
 client = TestClient(app)
 
-def test_predict_requires_auth():
+def test_predict_with_payload():
     payload = {
-        "trip_distance": 3.0,
-        "passenger_count": 1,
-        "pickup_hour": 8,
-        "pickup_day_of_week": 2,
-        "pickup_month": 5
+        "pickuphour": 10,
+        "dayof_week": 2,
+        "month": 1,
+        "trip_distance": 3.5,
+        "PULocationID": 132,
+        "DOLocationID": 45,
+        "congestion_surcharge": 2.5,
+        "cbd_congestion_fee": 1.0,
+        "total_amount": 25.0
     }
-    r = client.post("/predict", json=payload)
-    assert r.status_code == 401
+
+    response = client.post("/predict", json=payload)
+
+    assert response.status_code == 200
+    assert response.json()["estimated_duration"] > 0
