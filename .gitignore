@@ -17,3 +17,5 @@ airflow.cfg
 # OS
 .DS_Store
 Thumbs.db
+
+# password database silver_data with user silver_user est root123

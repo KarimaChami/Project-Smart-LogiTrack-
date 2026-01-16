@@ -13,3 +13,7 @@ sqlalchemy
 psycopg2-binary
 pytest
 fastapi
+apache-airflow
+python-jose
+passlib[argon2]
+uvicorn
